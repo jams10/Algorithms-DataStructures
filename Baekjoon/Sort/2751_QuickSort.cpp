@@ -1,4 +1,5 @@
 // // Couldn't solve 2751 by using QuickSort...
+// // Worst case O(n^2)
 
 // #include <iostream>
 // #include <stdio.h>
