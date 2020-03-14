@@ -29,4 +29,5 @@
 //     }
 //   }
 //   std::cout<<result;
+//   delete[] pCards;
 // }

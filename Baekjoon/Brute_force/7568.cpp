@@ -44,4 +44,5 @@
 //       std::cout<<' ';
 //     }
 //   }
+//   delete[] pInfos;
 // }

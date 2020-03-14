@@ -76,4 +76,5 @@
 //   {
 //     printf("%d\n",pArray[i]);
 //   }
+//   delete[] pArray;
 // }
