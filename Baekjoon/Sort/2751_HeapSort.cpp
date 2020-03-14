@@ -1,5 +1,6 @@
 // // 1. Make input array into MAX or MIN Heap using push function.
 // // 2. Sort array by popping Heap elements.
+// // This code is using Max Heap
 
 // #include <iostream>
 // #include <stdio.h>
