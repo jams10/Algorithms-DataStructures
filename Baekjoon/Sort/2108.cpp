@@ -7,7 +7,7 @@
 // {
 //   int positive[4001]={0,};
 //   int negative[4001]={0,};
-//   int n=0, count=0, mode=0, negativeSign=0;
+//   int n=0, count=0;
 //   double sum=0;
 //   cin>>n;
 //   int *pArr = new int[n];
