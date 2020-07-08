@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 bool comp(int a, int b)
 {
@@ -8,42 +9,27 @@ bool comp(int a, int b)
 
 int main(int argc, char *argv[])
 {
-  int n = 0, sum = 0, count=0;
+  int n = 0, tmp = 0, count = 0;
   std::cin>>n;
 
-  int*p = new int[n];
+  std::vector<int> v;
+  std::vector<int>::iterator iter;
 
   for(int i=0; i<n; i++)
   {
-    std::cin>>p[i];
+    std::cin>>tmp;
+    v.push_back(tmp);
   }
 
-  std::sort(p,p+n,comp);
-
-  for(int i=0; i<n; i++)
+  for(int i=0; i<v.size() i++)
   {
-    //남은거 조건 체크 필요 ex) 1,1 남을시 어떻게 처리할 것인가?
-    sum = p[i];
-    for(int j=n-1; j>0; j--)
+    for(int j=0; j<v.size(); j++)
     {
-      sum += p[j];
-      if(sum <= 4)
-      {
-        n--;
-      }
-      else if(sum > 4) 
-      { 
-        count++;
-        break; 
-      }
-      std::cout<<"i : "<<i<<" p[i] : "<<p[i]<<std::endl;
-      std::cout<<"j : "<<j<<" p[j] : "<<p[j]<<std::endl;
+      if(v.at(j))
     }
-    sum = 0;
   }
 
   std::cout<<count;
-  delete[]p;
   
   return 0;
 }
