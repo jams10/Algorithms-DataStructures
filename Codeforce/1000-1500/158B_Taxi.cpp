@@ -1,70 +1,55 @@
-#include <iostream>
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+bool comp(int a, int b)
+{
+  return a > b;
+}
 
 int main(int argc, char *argv[])
 {
   int n = 0, tmp = 0, count = 0;
-  int nFour = 0, nThree = 0, nTwo = 0, nOne = 0;
   std::cin>>n;
 
+  std::vector<int> v;
+  
   for(int i=0; i<n; i++)
   {
     std::cin>>tmp;
-    if(tmp==4)
-    {
-      n_Four++;
-    }
-    else if(tmp==3)
-    {
-      n_Three++;
-    }
-    else if(tmp==2)
-    {
-      nTwo++;
-    }
-    else if(tmp==1)
-    {
-      nOne++;
-    }
+    v.push_back(tmp);
   }
 
-  //4
-  count+=nFour;
+  sort(v.begin(), v.end(), comp);
 
-  //3
-  if(nThree > 0)
+  for(int i=0; i<n; i++)
   {
-    if(nThree >= nOne)
+    if(v.at(i)==4)
     {
-      count += (nThree / nOne);
-      nThree = nThree % nOne ;
-      count += nThree;
+      count++;
     }
     else
     {
-      count += (nOne / nThree);
-      nOne = nOne % nThree;
-    }
-  }
-
-  //2
-  if(nTwo > 0)
-  {
-    if(nTwo >= nOne)
-    {
-      if(nOne % 2 == 0)
+      for(int j=n-1; j>0; j--)
       {
-        count += (nTwo)
+        if(v.at(i) + v.at(j) <= 4)
+        {
+          v.at(i) += v.at(j);
+          n--;
+        }
+        else if(v.at(i) + v.at(j) > 4)
+        {
+          break;
+        }
+        if(i==j)
+        {
+          break;
+        }
       }
+      count++; // solution code position (n==2, elements == 2,1)
     }
-  }
-
-  //1
-  if(nOne > 0)
-  {
-    count+=nOne;
   }
 
   std::cout<<count;
-  
   return 0;
 }
