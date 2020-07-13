@@ -10,11 +10,11 @@ int main(int argc, char *argv[])
     std::cin>>angle;
     if(360 % ( 180-angle ) == 0) // result is integer
     {
-      std::cout<<"YES";
+      std::cout<<"YES"<<Std::endl;
     }
     else
     {
-      std::cout<<"NO";
+      std::cout<<"NO"<<std::endl;
     }
   }
 
