@@ -12,7 +12,7 @@ int minimum_swap(vector<int> v)
 
   sort(sorted_v.begin(), sorted_v.end());
   for(int i=0; i<sorted_v.size(); i++)
-  {
+  {//                     ▼key     ▼value
     m.insert(make_pair(sorted_v[i], i));
   }
 
