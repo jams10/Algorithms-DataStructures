@@ -54,6 +54,7 @@ int main()
 
   map에서 []연산자를 사용할 경우, 해당 항목이 존재하지 않으면 새로 생성함.
   이때, 디폴트 생성자를 호출하게 되고, 디폴트 생성자는 0을 리턴함.
+  이를 활용해 문제를 해결.
 
   https://github.com/krikit/krikit.github.io/wiki/2014-07-08-map%EC%9D%98-insert-%EB%A9%94%EC%84%9C%EB%93%9C%EC%99%80-%5B%5D-%EC%97%B0%EC%82%B0%EC%9E%90
 
