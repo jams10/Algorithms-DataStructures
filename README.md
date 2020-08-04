@@ -1,3 +1,3 @@
 # Algorithm-Learning
 
-:book: study algorithm & solve programming problems
+:muscle: study algorithm & solve programming problems
