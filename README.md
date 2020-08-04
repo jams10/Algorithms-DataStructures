@@ -1,3 +1,3 @@
 # Algorithm-Learning
 
-:book:
+:book: study algorithm & solve programming problems
