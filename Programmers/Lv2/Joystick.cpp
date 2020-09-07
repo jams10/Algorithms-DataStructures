@@ -71,3 +71,49 @@ int solution( string name )
     cout << name << endl;
     return answer;
 }
+
+// 프로그래머스 답안 LUT 사용 참고 & 코드 수 줄이기
+
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int solution( string name )
+{
+    // A에서 특정 알파벳으로 바꿀 때 몇번이 걸리는지 미리 저장해둔 테이블
+    int LUT[] = { 0,1,2,3,4,5,6,7,8,9,10,11,12,13,12,11,10,9,8,7,6,5,4,3,2,1 }; 
+    int answer = 0;
+    // 미리 알파벳들을 변환했을 때의 수를 답에 저장.
+    for( const auto e : name ) answer += LUT[e - 'A'];
+    
+    int len = name.length();
+    int idx = 0;
+    string finish( name.length(), 'A' );
+    
+    while( true )
+    {
+        for( int i = 0; i < len; i++ )
+        {
+            // 오른쪽으로 진행 string 인덱스 초과시 오류 발생 => mod 연산 사용하여 길이만큼 나눔.
+            if( name[(idx + i) % len] != 'A' )
+            {
+                answer += i;
+                name[(idx + i) % len] = 'A';
+                idx = (idx + i) % len;
+                break;
+            }
+            // 왼쪽으로 진행
+            else if( name[(len + idx - i) % len] != 'A' )
+            {
+                answer += i;
+                name[(len + idx - i) % len] = 'A';
+                idx = (len + idx - i) % len;
+                break;
+            }
+        }
+        if( finish == name ) break;
+    }
+    return answer;
+}
