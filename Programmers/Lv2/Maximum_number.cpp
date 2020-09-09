@@ -40,6 +40,6 @@ string solution( vector<int> numbers )
   strick-weark-order를 만족해야 함.
 
   따라서 comp(a,b) 가 true 일 때, comp(b,a) 도 true 일 수 없음.
-  또한 a==b 일 때 a > b 가 false 이면 
+  또한 a==b 일 때 a > b 가 false 이면 a < b 도 false 이어야 함.
 
 */
