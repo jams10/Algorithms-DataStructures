@@ -1,3 +1,3 @@
 # Algorithm & Data Structures
 
-:muscle: study algorithm & Data Structures
+:muscle: study algorithms & Data Structures
