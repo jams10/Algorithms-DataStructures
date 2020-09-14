@@ -1,3 +1,3 @@
-# Algorithm Study
+# Algorithm & Data Structures
 
-:muscle: study algorithm & solve programming problems
+:muscle: study algorithms & Data Structures
