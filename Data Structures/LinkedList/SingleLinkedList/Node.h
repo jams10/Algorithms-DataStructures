@@ -4,9 +4,9 @@ class Node
 {
 public:
     Node();
-    Node(int inValue);
-    void SetValue(int inValue);
-    void SetNext(Node* nextNode);
+    Node( int inValue );
+    void SetValue( int inValue );
+    void SetNext( Node* nextNode );
     int GetValue();
     Node* GetNext();
 private:

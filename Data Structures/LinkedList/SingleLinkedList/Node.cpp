@@ -2,24 +2,24 @@
 
 Node::Node()
     :
-    next(nullptr),
-    value(0)
+    next( nullptr ),
+    value( 0 )
 {
 }
 
-Node::Node(int inValue)
+Node::Node( int inValue )
     :
-    next(nullptr),
-    value(inValue)
+    next( nullptr ),
+    value( inValue )
 {
 }
 
-void Node::SetValue(int inValue)
+void Node::SetValue( int inValue )
 {
     this->value = inValue;
 }
 
-void Node::SetNext(Node* nextNode)
+void Node::SetNext( Node* nextNode )
 {
     this->next = nextNode;
 }

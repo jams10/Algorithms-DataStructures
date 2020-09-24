@@ -6,18 +6,20 @@ class SingleLinkedList
 {
 public:
     SingleLinkedList();
-    SingleLinkedList(int inSize);
+    SingleLinkedList( int inSize );
     ~SingleLinkedList();
 
-    bool Search(int value);
+    bool Search( int value );
     bool IsEmpty();
-    void Add(int value);
-    void AddAt(int index, int value);
-    void Pop();
-    void RemoveAt(int index);
-    int GetNodeAt(int index);
-
-private:
+    void Add( int value );              // push back
+    void AddAt( int index, int value ); // add by index
+    int Pop();                          // pop
+    void RemoveAt( int index );         // remove by index
+    void Show();
+    void SetValueAt( int index, int value );
+    int GetValueAt( int index );
+    int GetSize();
+public:
     Node* head;
     Node* tail;
     int size;
