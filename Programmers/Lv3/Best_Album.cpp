@@ -54,3 +54,7 @@ vector<int> solution(vector<string> genres, vector<int> plays) {
 
     return answer;
 }
+
+/*
+    다른 사람들의 풀이를 보면 map의 map. 이중 맵을 써서 푸는 방법도 존재.
+*/
